@@ -20,7 +20,8 @@
         $('.items').owlCarousel({
             items: 3,
             autoPlay: true,
-            pagination: false
+            pagination: true,
+            autoPlay: 2000,
         });
     }());
 
