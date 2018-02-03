@@ -1,8 +1,8 @@
 # mini-blog
 
 # 
-  mini-blog/ - страница всех постов
-  mini-blog/blog/id - сттаница одного поста
+    mini-blog/ - страница всех постов
+    mini-blog/blog/id - сттаница одного поста
 
   LAMP:	
     Apache 2.4
