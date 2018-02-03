@@ -28,17 +28,18 @@ class BlogController {
 	    		$params['created_date'] = time();
 	    		$params['comment_count'] = 0;
 
-	    		if(Post::savePost($params))
-	    		{
-	    			$id = Post::savePost($params);
-	    			header("Location: blog/".$id);	
-	    		}
+	    		$id = Post::savePost($params);
+	    		header("Location: blog/".$id);	
+	    		
     		}
     	}
 
     	$post = [];
     	$posts = Post::getPostList();
-    	$mostCommentsPosts = Post::getMostCommentsPostList();
+
+    	if(!empty(Post::getMostCommentsPostList()) && (count(Post::getMostCommentsPostList()) >= 5)){
+    		$mostCommentsPosts = Post::getMostCommentsPostList();
+    	}
     	
     	require_once ROOT . '/views/blog/posts.php';
         

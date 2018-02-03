@@ -6,7 +6,7 @@
 <!--main content start-->
 <div class="main-content">
     <div class="container">
-
+    <?php if(isset($mostCommentsPosts)): ?>
     	<div class="row">
     		<div class="col-sm-8 col-sm-offset-2">
     			<div class="related-post-carousel"><!-- related post carousel -->
@@ -27,7 +27,7 @@
             	</div><!-- related post carousel -->
     		</div>
     	</div>
-
+    <?php endif; ?>
         <div class="row">
             <div class="col-sm-8 col-sm-offset-2">
                 <div class="leave-comment"><!--leave comment-->
